@@ -1,5 +1,8 @@
+// O básico sobre objetos JavaScript
+
 // Criei um objeto vazio e estou verificando do tipo de dado, que é object.
 // Quando criamos o objeto passando valores este é chamado de objeto literal.
+
 let pessoa = {};
 console.log(typeof pessoa); // retorna object
 
@@ -90,3 +93,41 @@ gato.personalidade = 'divertido'; // adiciona uma propriedade se ela não existi
 gato['amigo'] = 'Otis'; // adiciona uma propriedade com notação de colchetes,
 console.log('para comparar');
 console.log(gato);
+
+// Objeto-literal
+
+let padaria = {
+	nome: 'Pão de Ouro',
+	endereco: 'Avenida Paulista, 1300',
+	cidade: 'São Paulo',
+	estado: 'SP',
+	produtos: ['pão', 'biscoito', 'bolo', 'doce', 'sanduiche'],
+	acao: function () {
+		return 'O melhor pão da Paulista';
+	},
+};
+
+// Adicionando um método setando
+padaria.restaurante = function () {
+	console.log('Em breve');
+};
+
+console.log(padaria);
+padaria.restaurante();
+
+// A notação de colchetes pode ser usada não apenas para setar valores dinamicamente,
+// mas também nomes de membros.
+
+let estudante = {
+	nome: 'Fábio',
+	idade: 32,
+};
+
+console.log(estudante); // { nome: 'Fábio', idade: 32 }
+
+let myDataName = 'altura';
+let myDataValue = '1.75m';
+estudante[myDataName] = myDataValue; // Adicionando a propriedade altura.
+
+console.log(estudante.altura); 
+console.log(estudante); // { nome: 'Fábio', idade: 32, altura: '1.75m' }
